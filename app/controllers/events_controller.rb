@@ -26,7 +26,7 @@ class EventsController < ApplicationController
         @event=Event.find(params[:id])
 
         if @event.update(event_params)
-            redirect_to @event, notice:"Event Successfully Created!"
+            redirect_to @event, notice:"Event Successfully Updated!"
 
         else
             render :edit
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:user).permit(:name,:location,:price,:starts_at,:description,)
+        params.require(:event).permit(:name,:location,:price,:starts_at,:description,)
     end
 
     
