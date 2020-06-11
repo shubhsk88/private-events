@@ -25,14 +25,16 @@
       
     </div>
      <div class="flex justify-end">
-        <a class="px-4 py-2 mt-2 text-md bg-purple-400">Sign In </a>
+        <%=link_to "Sign Up",new_user_path,class:"bg-purple-800 text-white font-bold text-lg px-4 py-2 my-2  rounded-lg hover:bg-purple-600"%>
+        
      
       </div>
   </div>
   </div>
   </div>
-  <body>
-
+  <body >
+  <div class="flex items-center">
     <%= yield %>
+    </div>
   </body>
 </html>
