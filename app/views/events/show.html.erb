@@ -6,7 +6,7 @@
        <%= price(@event) %>
     </h2>
     <h3>
-      <%= @gievent.starts_at.strftime("%B %d at %I:%M %P") %> in <%= @event.location %>
+      <%= @event.starts_at.strftime("%B %d at %I:%M %P") %> in <%= @event.location %>
     </h3>
     <p>
       <%= @event.description %>
