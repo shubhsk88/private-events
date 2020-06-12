@@ -15,8 +15,15 @@
   <div class="py-2"><%= f.label :price %></div>
   <%= f.number_field :price,class:"bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"  %>
 
+  <div class="py-2"><%= f.label :image_link %></div>
+  <%= f.text_field :image_link,class:"bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"  %>
+
+  <div class="py-2"><%= f.label :capacity %></div>
+  <%= f.number_field :capacity,class:"bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"  %>
+
+
   <div class="py-2"><%= f.label :starts_at %></div>
-  <%= f.datetime_select :starts_at, {ampm: true}, {class: "datetime my-4 py-2 px-1 bg-gray-200 "} %>
+  <%= f.datetime_select :starts_at, {ampm: true}, {class: "datetime  my-4 py-2 px-1  focus:outline:none rounded bg-gray-200 focus:bg-white focus:border-purple-500 "} %>
 
   
 

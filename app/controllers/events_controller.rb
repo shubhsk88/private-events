@@ -1,10 +1,11 @@
 class EventsController < ApplicationController
+    before_action :require_signin,except: [:index,:show]
     def index
         @events=Event.all
     end
 
     def edit
-        @event=Event.find(:params[:id])
+        @event=Event.find(params[:id])
     end
 
     def create
@@ -48,7 +49,7 @@ class EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:name,:location,:price,:starts_at,:description,)
+        params.require(:event).permit(:name,:location,:price,:starts_at,:description,:image_link,:capacity)
     end
 
     
