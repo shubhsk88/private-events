@@ -2,3 +2,11 @@
   <h1><%= @user.name %></h1>
   <h2><%= mail_to(@user.email) %></h2>
 </section>
+<section class="text-xl p-4">
+  <%@events.each do |event| %>
+  <div class="px-12 py-4 shadow-lg rounder ">
+  <div class="p-4 my-4 text-lg"><%=event.name%></div>
+  <div clas="p-2"><%=event.description%></div>
+  </div>
+<%end%>
+</section>
