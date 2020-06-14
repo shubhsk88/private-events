@@ -7,31 +7,9 @@
 <%if  @upcoming_events.exists?%>
 
  <div class="text-xl text-center py-4">Upcoming events </div>
-  <div class="px-12 py-4 shadow-xl border rounded-lg" >
+ 
     <% @upcoming_events.each do |event|%>
-      <%=link_to(event) do %>
-      <div class="flex justify-between">
-        
-       <div class="py-4 my-2 text-3xl"><%=event.name%></div>
-        <h3 class="py-4 my-2 font-light text-lg">
-          <%= event.starts_at.strftime("%B %d at %I:%M %P") %> in <%= event.location %>
-      </h3>
-       </div>
-      <div clas="p-2"><%=event.description%></div>
-      <%end%>
-    <%end%>
-    
-  </div>
-<%else%>
-   <h2 class="text-xl text-center py-4">No Upcoming events </h2>
-<%end%> 
-
-<%if @past_events.exists?%>
-
- <div class="text-xl text-center py-4">Past events </div>
-  <div class="px-12 py-4  shadow-xl border rounded-lg" >
-    <%@past_events.each do |event|%>
-    <div class="my-4">
+       <div class="px-12 py-4 my-4 shadow-xl border rounded-lg" >
       <%=link_to(event) do %>
       <div class="flex justify-between">
         
@@ -43,6 +21,32 @@
       <div clas="p-2"><%=event.description%></div>
       <%end%>
       </div>
+    <%end%>
+    
+  
+<%else%>
+   <h2 class="text-xl text-center py-4">No Upcoming events </h2>
+<%end%> 
+
+<%if @past_events.exists?%>
+
+ <div class="text-xl text-center py-4">Past events </div>
+ 
+    <%@past_events.each do |event|%>
+     <div class="px-12 py-4 my-4  shadow-xl border rounded-lg" >
+    <div class="my-4">
+      <%=link_to(event) do %>
+      <div class="flex justify-between">
+        
+       <div class="py-4 my-2 text-3xl"><%=event.name%></div>
+        <h3 class="py-4 my-2 font-light text-lg">
+          <%= event.starts_at.strftime("%B %d at %I:%M %P") %> in <%= event.location %>
+      </h3>
+       </div>
+      <div clas="p-2"><%=event.description%></div>
+      </div>
+      <%end%>
+      
     <%end%>
     
   </div>
