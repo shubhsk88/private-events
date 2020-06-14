@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
     before_action :require_signin,except: [:index,:show]
+    before_action :require_correct_user,only: [:edit,:update]
     def index
         @upcoming_events=Event.upcoming
         @past_events=Event.past
@@ -46,6 +47,7 @@ class EventsController < ApplicationController
     def new
        @event=Event.new
     end
+    
 
     private
 
@@ -53,5 +55,11 @@ class EventsController < ApplicationController
         params.require(:event).permit(:name,:location,:price,:starts_at,:description,:image_link,:capacity)
     end
 
-    
+    def require_correct_user
+        @event=Event.find(params[:id])
+        unless current_user.id==@event.creator_id
+            redirect_to events_path,alert:"UnAuthorized Acess"
+
+        end
+    end
 end

@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
 User.create!([
   {name:"Lucy",
     email:"lucy@gmail.com",
@@ -40,6 +42,7 @@ Event.create!([
       price: 0.00,
       starts_at: 30.days.from_now,
       creator_id:2,
+      image_link:"https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       description: %{
         Join us for a fun evening of bug smashing! It's a great
         way to get involved in open source projects whether you're
@@ -53,6 +56,7 @@ Event.create!([
       price: 15.00,
       starts_at: 45.days.from_now,
       creator_id:1,
+      image_link:"https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
       description: %{
         Got a killer app idea you've been itching to work on? Hunker
         down and hack away! This is an intense, focused day of hacking
@@ -76,6 +80,7 @@ Event.create!([
       price: 0.00,
       starts_at: 20.days.ago,
       creator_id:2,
+      image_link:"https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80",
       description: %{
         Start your day off right with a good cup of Joe while you sling some code with other local developers. By the time you hit the office, you'll be in the groove!
       }.squish
@@ -86,6 +91,7 @@ Event.create!([
       price: 0.00,
       starts_at: 2.days.ago,
       creator_id:4,
+      image_link:"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80",
       description: %{
         Come enjoy a technical talk and meet local Rails developers! This week's topic is a comparison of editors, templating systems, and whether to use tabs or spaces.
       }.squish

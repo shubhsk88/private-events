@@ -1,6 +1,6 @@
 <section class="user">
-  <h1><%= @user.name %></h1>
-  <h2><%= mail_to(@user.email) %></h2>
+  <h1 class="text-2xl py-4 "><%= @user.name %></h1>
+  <h2 class="text-xl hover:underline text-blue-600"><%= mail_to(@user.email) %></h2>
 </section>
 <section class="my-4 ">
 
@@ -29,8 +29,9 @@
 <%if @past_events.exists?%>
 
  <div class="text-xl text-center py-4">Past events </div>
-  <div class="px-12 py-4 shadow-xl border rounded-lg" >
+  <div class="px-12 py-4  shadow-xl border rounded-lg" >
     <%@past_events.each do |event|%>
+    <div class="my-4">
       <%=link_to(event) do %>
       <div class="flex justify-between">
         
@@ -41,6 +42,7 @@
        </div>
       <div clas="p-2"><%=event.description%></div>
       <%end%>
+      </div>
     <%end%>
     
   </div>
@@ -52,10 +54,10 @@
 <section class="text-xl my-8">
 <div class="text-xl text-center py-4 my-8 ">Event Created By you  </div>
   <%@events.each do |event| %>
-  <div class="px-12 py-4 shadow-lg border rounded-lg ">
+  <div class="px-12 py-4 my-4 shadow-lg border rounded-lg ">
   <%=link_to(event) do %>
   <div class="flex justify-between">
-  <div class="p-4 my-4 text-lg"><%=event.name%></div>
+  <div class="py-4 my-2 text-3xl"><%=event.name%></div>
    <h3 class="py-4 my-2 font-light text-lg">
           <%= event.starts_at.strftime("%B %d at %I:%M %P") %> in <%= event.location %>
     </h3>

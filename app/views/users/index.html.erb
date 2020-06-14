@@ -6,7 +6,7 @@
 <ul>
     <%@users.each do |user|%>
         <li class="border m-4 py-8 px-4 rounded-lg w-1/2 shadow-lg mx-auto"> 
-            <%=link_to user.name,user,class:"text-blue-300 underline text-lg"%>
+            <%=user.name%>
             <div class="py-2 px-4">
             Created
             <%=time_ago_in_words(user.created_at)%> ago

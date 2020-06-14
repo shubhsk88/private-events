@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     
-    before_action :require_signin,except:[:create,:new]
+    before_action :require_signin,except:[:create,:new,:show]
+   
     
     
 
@@ -44,5 +45,6 @@ class UsersController < ApplicationController
         params.require(:user).permit(:name,:email,:password)
     end
 
+    
 
 end
