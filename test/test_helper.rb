@@ -12,7 +12,6 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :minitest
