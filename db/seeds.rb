@@ -6,6 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create!([
+  {name:"Lucy",
+    email:"lucy@gmail.com",
+    password:"secret"
+  },
+  {name:"Rick",
+    email:"Rick@gmail.com",
+    password:"funny"
+  },
+  {name:"Morty",
+    email:"morty@gmail.com",
+    password:"funny",
+
+
+  },
+  {name:"jessica",
+    email:"jessica@gmail.com",
+    password:"jessica"
+  }
+
+
+
+
+
+
+])
+
 Event.create!([
     {
       name: 'BugSmash',
@@ -13,7 +40,6 @@ Event.create!([
       price: 0.00,
       starts_at: 30.days.from_now,
       creator_id:2,
-      attendee_ids:1,
       description: %{
         Join us for a fun evening of bug smashing! It's a great
         way to get involved in open source projects whether you're
@@ -27,7 +53,6 @@ Event.create!([
       price: 15.00,
       starts_at: 45.days.from_now,
       creator_id:1,
-      attendee_ids:4,
       description: %{
         Got a killer app idea you've been itching to work on? Hunker
         down and hack away! This is an intense, focused day of hacking
@@ -41,7 +66,6 @@ Event.create!([
       price: 75.00,
       starts_at: 65.days.from_now,
       creator_id:1,
-      attendee_ids:3,
       description: %{
         Kata Camp is where developers go to practice their craft without interruptions. Skip the status reports and stand-up meetings of a typical project. Just get 'er done! Price includes a buffet lunch and a leather-bound journal to record your kata achievements.
       }.squish
@@ -61,8 +85,7 @@ Event.create!([
       location: 'Reston, VA',
       price: 0.00,
       starts_at: 2.days.ago,
-      creator_id:1,
-      attendee_ids:3,
+      creator_id:4,
       description: %{
         Come enjoy a technical talk and meet local Rails developers! This week's topic is a comparison of editors, templating systems, and whether to use tabs or spaces.
       }.squish
@@ -72,8 +95,7 @@ Event.create!([
       location: 'Chigaco, IL',
       price: 0.00,
       starts_at: 5.days.ago,
-      creator_id:1,
-      attendee_ids:2,
+      creator_id:3,
       description: %{
         Do you heart Ruby? So do we! Every week a local developer presents
         a new Ruby-related topic to help you keep on top of your game.
@@ -84,7 +106,6 @@ Event.create!([
       location: 'Kansas City, MO',
       price: 15.00,
       creator_id:4,
-      attendee_ids:3,
       starts_at: 10.days.ago,
       description: %{
         Got a newfangled trick? A handy new tool? A just-released library? Here's your chance to share it! But you only get 5 minutes to present your must-know tip, so keep it snappy. Price includes an open ice cream and root beer float bar.
@@ -96,7 +117,6 @@ Event.create!([
       price: 0.00,
       starts_at: 90.days.from_now,
       creator_id:1,
-      attendee_ids:4,
       description: %{
         What happens when software and hardware geeks get together?
         Thing spin, whirl, and (possibly) collide! Everyone is welcome, whether you're new to hacking with drones and drone software, or have experience that reaches to the sky.
@@ -108,7 +128,6 @@ Event.create!([
       price: 25.00,
       starts_at: 10.days.from_now,
       creator_id:1,
-      attendee_ids:4,
       description: %{
         Why ninjas? We have no idea, but the icon is cool. Don't miss this opportunity to show off your ninja moves.
       }.squish
@@ -116,29 +135,4 @@ Event.create!([
   ])
 
 
-  User.create!([
-      {name:"Lucy",
-        email:"lucy@gmail.com",
-        password:"secret"
-      },
-      {name:"Rick",
-        email:"Rick@gmail.com",
-        password:"funny"
-      },
-      {name:"Morty",
-        email:"morty@gmail.com",
-        password:"funny",
-
-
-      },
-      {name:"jessica",
-        email:"jessica@gmail.com",
-        password:"jessica"
-      }
-    
-    
-    
-    
-    
-    
-    ])
+  

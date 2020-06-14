@@ -4,11 +4,11 @@
 </section>
 <section class="my-4 ">
 
-<%if @user.attended_events.exists?%>
+<%if  @upcoming_events.exists?%>
 
  <div class="text-xl text-center py-4">Upcoming events </div>
   <div class="px-12 py-4 shadow-xl border rounded-lg" >
-    <%@user.attended_events.each do |event|%>
+    <% @upcoming_events.each do |event|%>
       <%=link_to(event) do %>
       <div class="flex justify-between">
         
@@ -24,6 +24,28 @@
   </div>
 <%else%>
    <h2 class="text-xl text-center py-4">No Upcoming events </h2>
+<%end%> 
+
+<%if @past_events.exists?%>
+
+ <div class="text-xl text-center py-4">Past events </div>
+  <div class="px-12 py-4 shadow-xl border rounded-lg" >
+    <%@past_events.each do |event|%>
+      <%=link_to(event) do %>
+      <div class="flex justify-between">
+        
+       <div class="py-4 my-2 text-3xl"><%=event.name%></div>
+        <h3 class="py-4 my-2 font-light text-lg">
+          <%= event.starts_at.strftime("%B %d at %I:%M %P") %> in <%= event.location %>
+      </h3>
+       </div>
+      <div clas="p-2"><%=event.description%></div>
+      <%end%>
+    <%end%>
+    
+  </div>
+<%else%>
+   <h2 class="text-xl text-center py-4">No Past events </h2>
 <%end%> 
 
 </section >
