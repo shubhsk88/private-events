@@ -30,6 +30,7 @@ You need to install:
 2. In your OS terminal search the repository's address and run:  
    \$ `bundle install`  
    \$ `rails db:migrate`
+   
    \$ `rails db:seed` (optional to load some data )
 3. Then run Rail's server  
    \$ `rails server`
