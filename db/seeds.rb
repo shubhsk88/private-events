@@ -42,6 +42,7 @@ Event.create!([
       price: 0.00,
       starts_at: 30.days.from_now,
       creator_id:2,
+    
       image_link:"https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       description: %{
         Join us for a fun evening of bug smashing! It's a great
@@ -54,6 +55,7 @@ Event.create!([
       name: 'Hackathon',
       location: 'Austin, TX',
       price: 15.00,
+      
       starts_at: 45.days.from_now,
       creator_id:1,
       image_link:"https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
@@ -141,4 +143,36 @@ Event.create!([
   ])
 
 
-  
+  Registration.create!([
+  {
+    attendee_id:2,
+    attended_event_id:5
+
+  },
+  {
+    attendee_id:3,
+    attended_event_id:2
+
+  },
+  {
+    attendee_id:1,
+    attended_event_id:9
+
+  },
+  {
+    attendee_id:4,
+    attended_event_id:1
+
+  },
+  {
+    attendee_id:1,
+    attended_event_id:4
+
+  },
+  {
+    attendee_id:2,
+    attended_event_id:1
+
+  }
+
+  ])
