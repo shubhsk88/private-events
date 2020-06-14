@@ -48,7 +48,7 @@
 <%@past_events.each do |event|%>
 
 
-<div class=" transition duration-200 ease-in-out hover:scale-105 max-w-sm rounded overflow-hidden shadow-lg m-4 transform ">
+<div class=" transition  duration-200 ease-in-out hover:scale-105 max-w-sm rounded overflow-hidden shadow-lg m-4 transform ">
   
   <%=link_to(event) do %>
   <%=image_tag event.image_link,class:"w-full h-56 object-cover object-center"%>
@@ -59,7 +59,7 @@
         <div class="font-bold text-2xl "> <%=event.starts_at.strftime("%d")%> </div>
     </div> 
     <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2"><%= event.name%></div>
+        <div class="font-bold text-xl name mb-2"><%= event.name%></div>
         <p class="py-2 text-gray-700 text-base">
         <%= truncate(event.description, length: 35, separator: ' ')%>
         </p>

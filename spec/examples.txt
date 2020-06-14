@@ -1,9 +1,12 @@
-example_id                  | status | run_time        |
---------------------------- | ------ | --------------- |
-./spec/event_spec.rb[1:1:1] | passed | 0.00981 seconds |
-./spec/event_spec.rb[1:1:2] | passed | 0.00992 seconds |
-./spec/event_spec.rb[1:1:3] | passed | 0.00085 seconds |
-./spec/user_spec.rb[1:1:1]  | passed | 0.01259 seconds |
-./spec/user_spec.rb[1:1:2]  | passed | 0.00519 seconds |
-./spec/user_spec.rb[1:1:3]  | passed | 0.00128 seconds |
-./spec/user_spec.rb[1:1:4]  | passed | 0.0039 seconds  |
+example_id                       | status | run_time        |
+-------------------------------- | ------ | --------------- |
+./spec/event_spec.rb[1:1:1]      | passed | 0.00459 seconds |
+./spec/event_spec.rb[1:1:2]      | passed | 0.01951 seconds |
+./spec/event_spec.rb[1:1:3]      | passed | 0.00104 seconds |
+./spec/user_sign_up_spec.rb[1:1] | failed | 0.00067 seconds |
+./spec/user_sign_up_spec.rb[1:2] | failed | 0.00119 seconds |
+./spec/user_sign_up_spec.rb[1:3] | failed | 0.00096 seconds |
+./spec/user_spec.rb[1:1:1]       | passed | 0.00083 seconds |
+./spec/user_spec.rb[1:1:2]       | passed | 0.00061 seconds |
+./spec/user_spec.rb[1:1:3]       | passed | 0.00061 seconds |
+./spec/user_spec.rb[1:1:4]       | passed | 0.00908 seconds |
