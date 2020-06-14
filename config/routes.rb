@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :registrations
   resources :events
   resources :users
   root "events#index"
