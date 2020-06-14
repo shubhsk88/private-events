@@ -5,7 +5,7 @@ This project is about organizing the event using rails where user can sign in an
 
 ## Screenshot
 
-
+![screenshot](https://github.com/shubhsk88/private-events/blob/feature_sigin/Screenshot.png)
 
 ## :hammer: Built With
 
