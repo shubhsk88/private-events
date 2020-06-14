@@ -19,11 +19,16 @@
     <%=link_to  "Edit Event",edit_event_path(@event), class:"bg-purple-800 text-white font-bold text-lg px-4 py-2 my-2 mx-4  rounded-lg focus:text-white hover:bg-purple-600"%>
   </div>
 
-  <div class="mx-auto py-4">
-        <h1 class="text-2xl font-semibold  "> List of Attendes</h1>
+  <div class="a=mx-auto py-4">
+        <h1 class="text-3xl font-semibold py-4 text-center  "> List of Attendes</h1>
+        <ol class="list-decimal">
+          
         <%@event.attendees.each do |attendee| %>
+        <li>
         <div class="text-xl py-2 "><%=attendee.name%></div>
         <%end%>
+        </li>
+        </ol>
   </div>
 </section>
 
