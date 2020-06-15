@@ -1,0 +1,83 @@
+
+<div class="flex justify-end "> <%=link_to "Add New Event",new_event_path,class:"px-4 py-4 bg-gray-100 rounded-lg shadow font-semibold hover:bg-purple-800 hover:text-white"%> </div>
+
+
+
+<%if(@upcoming_events.exists?)%>
+
+<div class="text-3xl text-center my-4">Upcoming Events</div> 
+<div class="flex flex-wrap">
+<%@upcoming_events.each do |event|%>
+
+
+<div class=" transition duration-200 ease-in-out hover:scale-105 max-w-sm rounded overflow-hidden shadow-lg m-4 transform ">
+  
+  <%=link_to(event) do %>
+  <%=image_tag event.image_link,class:"w-full h-56 object-cover object-center"%>
+  
+  <div class="flex ">
+    <div class="py-8 px-6" >
+        <div class="text-blue-400  text-lg py-4"> <%=event.starts_at.strftime("%^b")%> </div>
+        <div class="font-bold text-2xl "> <%=event.starts_at.strftime("%d")%> </div>
+    </div> 
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2"><%= event.name%></div>
+        <p class="py-2 text-gray-700 text-base">
+        <%= truncate(event.description, length: 35, separator: ' ')%>
+        </p>
+        <p class="py-2 text-gray-900 text-base">
+        <%=event.location%>
+        </p>
+
+    </div>
+  </div>
+  <%end%>
+</div>
+
+
+<%end%>
+
+</div>
+<%end%>
+
+
+<%if(@past_events.exists?)%>
+
+<div class="text-3xl text-center my-4">Past Events</div> 
+<div class="flex flex-wrap">
+<%@past_events.each do |event|%>
+
+
+<div class=" transition  duration-200 ease-in-out hover:scale-105 max-w-sm rounded overflow-hidden shadow-lg m-4 transform ">
+  
+  <%=link_to(event) do %>
+  <%=image_tag event.image_link,class:"w-full h-56 object-cover object-center"%>
+  
+  <div class="flex ">
+    <div class="py-8 px-6" >
+        <div class="text-blue-400  text-lg py-4"> <%=event.starts_at.strftime("%^b")%> </div>
+        <div class="font-bold text-2xl "> <%=event.starts_at.strftime("%d")%> </div>
+    </div> 
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl name mb-2"><%= event.name%></div>
+        <p class="py-2 text-gray-700 text-base">
+        <%= truncate(event.description, length: 35, separator: ' ')%>
+        </p>
+        <p class="py-2 text-gray-900 text-base">
+        <%=event.location%>
+        </p>
+
+    </div>
+  </div>
+  <%end%>
+</div>
+
+
+<%end%>
+
+</div>
+<%end%>
+
+
+
+

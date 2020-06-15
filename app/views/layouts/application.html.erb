@@ -4,12 +4,44 @@
     <title>PrivateEvents</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+<%= stylesheet_link_tag "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <div class="min-h-screen">
+  <div class="antialiased bg-gray-100 dark-mode:bg-gray-900 border">
+  <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="flex flex-row items-center justify-between p-4">
+        <%=link_to "Evently",events_path,class:"text-xl focus:outline-none font-semibold tracking-widest text-gray-900 uppercase  mr-12 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"%>
+        <nav class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+        <%=link_to "Events",events_path, class:"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" %>
+        <%=link_to "Members",users_path,class:"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"%>
+        
+      
+        </nav>
 
-  <body>
+       
+      
+    </div>
+     <div class="flex justify-end">
+     <%if(current_user)%>
+        <%=link_to current_user.name,current_user,class:"px-4 py-2 my-2 mx-4 font-semibold bg-transparent hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 rounded-lg "%>
+        <%=link_to "Sign Out",session_path,method: :delete,class:"bg-purple-800 text-white font-bold text-lg px-4 py-2 my-2 mx-4  rounded-lg focus:text-white hover:bg-purple-600"%>
+      <%else%> 
+        <%=link_to "Sign In",new_session_path,class:"bg-purple-800 text-white font-bold text-lg px-4 py-2 my-2 mx-4  rounded-lg hover:bg-purple-600"%>
+        <%=link_to "Sign Up",new_user_path,class:"bg-purple-800 text-white font-bold text-lg px-4 py-2 my-2 mx-4  rounded-lg hover:bg-purple-600"%>
+       <%end%> 
+     
+      </div>
+  </div>
+  </div>
+  </div>
+  <body >
+  <div class=" py-12  max-w-screen-xl mx-auto">
+  
+    <%= render "layouts/flash" %>
     <%= yield %>
+    </div>
   </body>
 </html>
