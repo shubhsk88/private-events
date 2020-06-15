@@ -1,4 +1,5 @@
-# Members Only
+# Evently- An App for organizing events
+
 
 This project is about organizing the event using rails where user can sign in and can see their upcoming event in their dashboard and use the active record association to manage the database 
 
