@@ -1,4 +1,3 @@
-
 # Evently- An App for organizing events
 
 
