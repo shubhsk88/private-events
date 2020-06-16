@@ -1,0 +1,35 @@
+<section class="mx-4 my-8 ">
+  
+  <div class=" w-full">
+    <h1 class="text-5xl font-bold  py-4 "><%= @event.name %></h1>
+    <h2 class="py-2 text-3xl font-semibold">
+     <%=pluralize(@event.capacity,"spot") %> &bull; <%= price(@event) %>
+    </h2>
+    <h3 class=" py-4 font-light text-2xl">
+      <%= @event.starts_at.strftime("%B %d at %I:%M %P") %> in <%= @event.location %>
+    </h3>
+    <p class="py-2 leading-5">
+      <%= @event.description %>
+    </p>
+
+    
+
+  </div>
+  <div class="flex justify-center py-8">
+    <%=link_to  "Edit Event",edit_event_path(@event), class:"bg-purple-800 text-white font-bold text-lg px-4 py-2 my-2 mx-4  rounded-lg focus:text-white hover:bg-purple-600"%>
+  </div>
+
+  <div class="a=mx-auto py-4">
+        <h1 class="text-3xl font-semibold py-4 text-center  "> List of Attendes</h1>
+        <ol class="list-decimal">
+          
+        <%@event.attendees.each do |attendee| %>
+        <li>
+        <div class="text-xl py-2 "><%=attendee.name%></div>
+        <%end%>
+        </li>
+        </ol>
+  </div>
+</section>
+
+
