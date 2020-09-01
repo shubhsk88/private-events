@@ -1,11 +1,14 @@
 # Evently
 
-This project is about organizing the event using rails where user can sign in and can see their upcoming event in their dashboard and use the active record association to manage the database 
+This project is about organizing the event using rails where user can sign in and can see their upcoming event in their dashboard and use the active record association to manage the database
 
+## Live Link
+
+[Live Link](https://eventlica.herokuapp.com/)
 
 ## Screenshot
 
-
+![screenshot](screenshot.png)
 
 ## :hammer: Built With
 
@@ -41,7 +44,6 @@ You need to install:
 - In Order to see the routes `http://localhost:3000/rails/info/routes`
 
 ## Authors
-
 
 👤 **Shubham Singh**
 
